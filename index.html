@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Wriothesley 桌面助手：AI 聊天、计划、截图 OCR、快速翻译、便签和装扮的一体化桌面工具。"
+    />
+    <title>Wriothesley 桌面助手</title>
+    <link rel="icon" href="./assets/icon.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="顶部导航">
+      <a class="brand" href="#top" aria-label="Wriothesley 桌面助手首页">
+        <img src="./assets/icon.png" alt="" />
+        <span>Wriothesley</span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="#features">功能</a>
+        <a href="#screens">截图</a>
+        <a href="#shortcuts">快捷键</a>
+        <a href="#wardrobe">装扮</a>
+        <a href="#download">下载</a>
+      </nav>
+      <button class="nav-download" type="button" data-open-download>下载</button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Desktop Companion</p>
+          <h1><span>Wriothesley</span><span>桌面助手</span></h1>
+          <p class="hero-text">
+            常驻桌面的 AI 助手。聊天、计划、截图 OCR、快速翻译、便签和装扮集中在一个轻量工具里。
+          </p>
+          <div class="product-tags" aria-label="产品特性">
+            <span>Local-first</span>
+            <span>Electron</span>
+            <span>DeepSeek API</span>
+          </div>
+          <div class="hero-actions">
+            <button class="primary-action" type="button" data-open-download>获取安装包</button>
+            <a class="secondary-action" href="#screens">查看界面</a>
+          </div>
+          <dl class="hero-metrics" aria-label="软件特性概览">
+            <div>
+              <dt>本地账号</dt>
+              <dd>多用户切换</dd>
+            </div>
+            <div>
+              <dt>AI 计划</dt>
+              <dd>聊天生成任务</dd>
+            </div>
+            <div>
+              <dt>快捷办公</dt>
+              <dd>截图与翻译</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-stage" aria-label="桌面助手角色预览">
+          <div class="petal-field" aria-hidden="true"></div>
+          <img
+            id="hero-character"
+            class="hero-character"
+            src="./assets/showcase/hero-frame-1.png"
+            alt="Wriothesley 桌面角色"
+          />
+        </div>
+      </section>
+
+      <section class="section overview" id="features">
+        <div class="section-heading">
+          <p class="eyebrow">Features</p>
+          <h2>把常用桌面工具收进一个助手</h2>
+          <p>功能说明保持简洁，界面展示以真实截图为准，避免公开页和实际 App 不一致。</p>
+        </div>
+        <div class="module-grid">
+          <article class="module-card">
+            <h3>桌面角色</h3>
+            <p>透明显示、置顶停靠、可拖拽，并记住上次关闭位置。</p>
+          </article>
+          <article class="module-card">
+            <h3>AI 聊天</h3>
+            <p>支持角色设定、历史记忆和上下文对话。</p>
+          </article>
+          <article class="module-card">
+            <h3>计划与周报</h3>
+            <p>聊天可写入计划，任务完成后可整理周报。</p>
+          </article>
+          <article class="module-card">
+            <h3>截图 OCR</h3>
+            <p>区域截图、保存、复制、文字识别和翻译。</p>
+          </article>
+          <article class="module-card">
+            <h3>便签与短文本</h3>
+            <p>记录常用信息，快速复制临时内容。</p>
+          </article>
+          <article class="module-card">
+            <h3>设置与装扮</h3>
+            <p>管理 API、快捷键、主题、透明度和角色外观。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section screens" id="screens">
+        <div class="section-heading">
+          <p class="eyebrow">Screenshots</p>
+          <h2>真实界面展示</h2>
+          <p>请把截图放入对应文件名。图片加入后，页面会直接显示真实 App 界面。</p>
+        </div>
+
+        <div class="screen-grid">
+          <article class="screen-card screen-card-top">
+            <div class="screen-meta"><span>AI Chat</span></div>
+            <div class="screen-shot" data-file="assets/screens/panel-chat.png">
+              <img src="./assets/screens/panel-chat.png" alt="聊天界面截图" />
+              <span>assets/screens/panel-chat.png</span>
+            </div>
+            <h3>聊天</h3>
+            <p>展示角色对话、历史记忆和输入区域。</p>
+          </article>
+
+          <article class="screen-card screen-card-top">
+            <div class="screen-meta"><span>Plan Board</span></div>
+            <div class="screen-shot" data-file="assets/screens/panel-plan.png">
+              <img src="./assets/screens/panel-plan.png" alt="计划界面截图" />
+              <span>assets/screens/panel-plan.png</span>
+            </div>
+            <h3>计划</h3>
+            <p>展示任务列表、状态切换和周报入口。</p>
+          </article>
+
+          <article class="screen-card screen-card-bottom">
+            <div class="screen-meta"><span>Notes</span></div>
+            <div class="screen-shot" data-file="assets/screens/panel-notes.png">
+              <img src="./assets/screens/panel-notes.png" alt="便签界面截图" />
+              <span>assets/screens/panel-notes.png</span>
+            </div>
+            <h3>便签</h3>
+            <p>展示内容记录、备注和复制操作。</p>
+          </article>
+
+          <article class="screen-card screen-card-bottom">
+            <div class="screen-meta"><span>Wardrobe</span></div>
+            <div class="screen-shot" data-file="assets/screens/panel-wardrobe.png">
+              <img src="./assets/screens/panel-wardrobe.png" alt="装扮界面截图" />
+              <span>assets/screens/panel-wardrobe.png</span>
+            </div>
+            <h3>装扮</h3>
+            <p>展示服装、头饰、耳饰选择。</p>
+          </article>
+
+          <article class="screen-card screen-card-bottom">
+            <div class="screen-meta"><span>Settings</span></div>
+            <div class="screen-shot" data-file="assets/screens/panel-settings.png">
+              <img src="./assets/screens/panel-settings.png" alt="设置界面截图" />
+              <span>assets/screens/panel-settings.png</span>
+            </div>
+            <h3>设置</h3>
+            <p>展示 API、快捷键、主题和透明度配置。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section shortcuts" id="shortcuts">
+        <div class="section-heading">
+          <p class="eyebrow">Shortcuts</p>
+          <h2>常用操作，用快捷键完成</h2>
+          <p>截图、翻译、剪贴板保存和短文本窗口都可以通过全局快捷键唤起，也可以在设置中重新录制。</p>
+        </div>
+        <div class="shortcut-grid">
+          <article class="shortcut-card">
+            <kbd>Option + A</kbd>
+            <h3>截图 OCR</h3>
+            <p>区域截图、保存、复制、文字识别和翻译。</p>
+          </article>
+          <article class="shortcut-card">
+            <kbd>Option + T</kbd>
+            <h3>快速翻译</h3>
+            <p>翻译当前选中的文字，并以浮窗展示结果。</p>
+          </article>
+          <article class="shortcut-card">
+            <kbd>Option + S</kbd>
+            <h3>保存剪贴板</h3>
+            <p>快速保存剪贴板中的文件或图片。</p>
+          </article>
+          <article class="shortcut-card">
+            <kbd>Option + W / Q</kbd>
+            <h3>短文本窗口</h3>
+            <p>打开或隐藏临时短文本窗口，便于反复复制。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section wardrobe" id="wardrobe">
+        <div class="section-heading">
+          <p class="eyebrow">Wardrobe</p>
+          <h2>多套外观，按心情切换</h2>
+          <p>这里仅展示合成后的公开预览图，不包含分层素材。</p>
+        </div>
+        <div class="outfit-grid">
+          <article class="outfit-card">
+            <img src="./assets/showcase/wriothesley-gufeng.png" alt="古风参考样式" />
+            <div>
+              <strong>古风</strong>
+              <span>古风外观</span>
+            </div>
+          </article>
+          <article class="outfit-card">
+            <img src="./assets/showcase/wriothesley-mecha.png" alt="机甲参考样式" />
+            <div>
+              <strong>机甲</strong>
+              <span>机甲外观</span>
+            </div>
+          </article>
+          <article class="outfit-card">
+            <img src="./assets/showcase/wriothesley-vest.png" alt="背心参考样式" />
+            <div>
+              <strong>背心</strong>
+              <span>简洁外观</span>
+            </div>
+          </article>
+          <article class="outfit-card">
+            <img src="./assets/showcase/wriothesley-casual.png" alt="休闲参考样式" />
+            <div>
+              <strong>休闲</strong>
+              <span>休闲外观</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section privacy-band">
+        <div class="section-heading">
+          <p class="eyebrow">Privacy</p>
+          <h2>本地优先，使用更安心</h2>
+          <p>账号数据、计划、聊天和便签默认保存在本机。API Key 只保留在本地配置中。</p>
+        </div>
+        <div class="privacy-grid">
+          <div>
+            <h3>多账号切换</h3>
+            <p>同一台电脑可多人使用，退出登录后回到登录页。</p>
+          </div>
+          <div>
+            <h3>关键配置本地化</h3>
+            <p>API 地址、Key 和模型配置不随账号上传。</p>
+          </div>
+          <div>
+            <h3>计划数据保护</h3>
+            <p>计划写入带备份恢复，降低本地文件损坏风险。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="download-section" id="download">
+        <div>
+          <p class="eyebrow">Download</p>
+          <h2>下载桌面助手</h2>
+          <p>安装包通过百度网盘提供。首次在其他 Mac 上打开时，如提示无法验证开发者，可按下方说明处理。</p>
+          <div class="mac-tip">
+            <span>macOS 首次打开</span>
+            <code>sudo xattr -r -d com.apple.quarantine /Applications/Wriothesley.app</code>
+          </div>
+        </div>
+        <button class="primary-action" type="button" data-open-download>打开下载链接</button>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <strong>Charren</strong>
+      <a href="mailto:1164120252@qq.com">1164120252@qq.com</a>
+    </footer>
+
+    <div class="download-modal" id="downloadModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close-download></div>
+      <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="downloadTitle">
+        <button class="modal-close" type="button" aria-label="关闭下载弹窗" data-close-download>×</button>
+        <img src="./assets/icon.png" alt="" />
+        <h2 id="downloadTitle">下载 Wriothesley 桌面助手</h2>
+        <p>下载后拖入“应用程序”。如果 macOS 提示无法验证开发者，请在终端执行下方命令后再打开。</p>
+        <code class="modal-command">sudo xattr -r -d com.apple.quarantine /Applications/Wriothesley.app</code>
+        <a class="modal-link" id="downloadLink" href="#" target="_blank" rel="noreferrer">百度网盘占位链接</a>
+      </section>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

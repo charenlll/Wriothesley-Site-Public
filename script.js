@@ -1,0 +1,93 @@
+const downloadConfig = {
+  url: "https://pan.baidu.com/s/1FELWJmEQ4jOv8RFaThRJ6A",
+  label: "打开百度网盘下载",
+};
+
+const modal = document.querySelector("#downloadModal");
+const downloadLink = document.querySelector("#downloadLink");
+const openButtons = document.querySelectorAll("[data-open-download]");
+const closeButtons = document.querySelectorAll("[data-close-download]");
+const screenshotImages = document.querySelectorAll(".screen-shot img");
+const heroCharacter = document.querySelector("#hero-character");
+const petalField = document.querySelector(".petal-field");
+
+const heroFrames = [
+  "./assets/showcase/hero-frame-1.png",
+  "./assets/showcase/hero-frame-2.png",
+  "./assets/showcase/hero-frame-3.png",
+  "./assets/showcase/hero-frame-4.png",
+  "./assets/showcase/hero-frame-5.png",
+  "./assets/showcase/hero-frame-6.png",
+  "./assets/showcase/hero-frame-7.png",
+  "./assets/showcase/hero-frame-8.png",
+];
+
+const heroFrameDurations = [1800, 1200, 900, 90, 1500, 1100, 80, 2200];
+
+function openDownloadModal() {
+  downloadLink.href = downloadConfig.url;
+  downloadLink.textContent = downloadConfig.label;
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function closeDownloadModal() {
+  modal.classList.remove("is-open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
+openButtons.forEach((button) => {
+  button.addEventListener("click", openDownloadModal);
+});
+
+closeButtons.forEach((button) => {
+  button.addEventListener("click", closeDownloadModal);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && modal.classList.contains("is-open")) {
+    closeDownloadModal();
+  }
+});
+
+screenshotImages.forEach((image) => {
+  const wrapper = image.closest(".screen-shot");
+  image.addEventListener("load", () => {
+    wrapper.classList.add("has-image");
+  });
+  image.addEventListener("error", () => {
+    wrapper.classList.remove("has-image");
+    image.removeAttribute("src");
+  });
+});
+
+if (heroCharacter) {
+  heroFrames.forEach((src) => {
+    const image = new Image();
+    image.src = src;
+  });
+
+  let frame = 0;
+  function scheduleNextFrame() {
+    frame = (frame + 1) % heroFrames.length;
+    heroCharacter.src = heroFrames[frame];
+    setTimeout(scheduleNextFrame, heroFrameDurations[frame] || 1000);
+  }
+
+  setTimeout(scheduleNextFrame, heroFrameDurations[0]);
+}
+
+if (petalField) {
+  for (let i = 0; i < 12; i += 1) {
+    const petal = document.createElement("span");
+    petal.className = "petal";
+    petal.style.left = `${Math.random() * 100}%`;
+    petal.style.animationDuration = `${10 + Math.random() * 7}s`;
+    petal.style.animationDelay = `${Math.random() * 10}s`;
+    petal.style.setProperty("--drift", `${Math.round(-50 + Math.random() * 100)}px`);
+    petal.style.setProperty("--scale", `${0.58 + Math.random() * 0.52}`);
+    petalField.appendChild(petal);
+  }
+}
