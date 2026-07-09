@@ -12,14 +12,14 @@ const heroCharacter = document.querySelector("#hero-character");
 const petalField = document.querySelector(".petal-field");
 
 const heroFrames = [
-  "./assets/showcase/hero-frame-1.png",
-  "./assets/showcase/hero-frame-2.png",
-  "./assets/showcase/hero-frame-3.png",
-  "./assets/showcase/hero-frame-4.png",
-  "./assets/showcase/hero-frame-5.png",
-  "./assets/showcase/hero-frame-6.png",
-  "./assets/showcase/hero-frame-7.png",
-  "./assets/showcase/hero-frame-8.png",
+  "./assets/showcase/hero-frame-1.webp",
+  "./assets/showcase/hero-frame-2.webp",
+  "./assets/showcase/hero-frame-3.webp",
+  "./assets/showcase/hero-frame-4.webp",
+  "./assets/showcase/hero-frame-5.webp",
+  "./assets/showcase/hero-frame-6.webp",
+  "./assets/showcase/hero-frame-7.webp",
+  "./assets/showcase/hero-frame-8.webp",
 ];
 
 const heroFrameDurations = [1800, 1200, 900, 90, 1500, 1100, 80, 2200];
