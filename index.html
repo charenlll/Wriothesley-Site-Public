@@ -15,7 +15,10 @@
   <body>
     <header class="site-header" aria-label="顶部导航">
       <a class="brand" href="#top" aria-label="Wriothesley 桌面助手首页">
-        <img src="./assets/icon.webp" alt="" />
+        <picture>
+          <source srcset="./assets/icon.webp" type="image/webp" />
+          <img src="./assets/icon.png" alt="" />
+        </picture>
         <span>Wriothesley</span>
       </a>
       <nav class="nav-links" aria-label="页面导航">
@@ -63,12 +66,15 @@
 
         <div class="hero-stage" aria-label="桌面助手角色预览">
           <div class="petal-field" aria-hidden="true"></div>
-          <img
-            id="hero-character"
-            class="hero-character"
-            src="./assets/showcase/hero-frame-1.webp"
-            alt="Wriothesley 桌面角色"
-          />
+          <picture>
+            <source srcset="./assets/showcase/hero-frame-1.webp" type="image/webp" />
+            <img
+              id="hero-character"
+              class="hero-character"
+              src="./assets/showcase/hero-frame-1.png"
+              alt="Wriothesley 桌面角色"
+            />
+          </picture>
         </div>
       </section>
 
@@ -116,9 +122,12 @@
         <div class="screen-grid">
           <article class="screen-card screen-card-top">
             <div class="screen-meta"><span>AI Chat</span></div>
-            <div class="screen-shot" data-file="assets/screens/panel-chat.webp">
-              <img src="./assets/screens/panel-chat.webp" alt="聊天界面截图" loading="lazy" />
-              <span>assets/screens/panel-chat.webp</span>
+            <div class="screen-shot" data-file="assets/screens/panel-chat.png">
+              <picture>
+                <source srcset="./assets/screens/panel-chat.webp" type="image/webp" />
+                <img src="./assets/screens/panel-chat.png" alt="聊天界面截图" loading="lazy" />
+              </picture>
+              <span>assets/screens/panel-chat.png</span>
             </div>
             <h3>聊天</h3>
             <p>展示角色对话、历史记忆和输入区域。</p>
@@ -126,9 +135,12 @@
 
           <article class="screen-card screen-card-top">
             <div class="screen-meta"><span>Plan Board</span></div>
-            <div class="screen-shot" data-file="assets/screens/panel-plan.webp">
-              <img src="./assets/screens/panel-plan.webp" alt="计划界面截图" loading="lazy" />
-              <span>assets/screens/panel-plan.webp</span>
+            <div class="screen-shot" data-file="assets/screens/panel-plan.png">
+              <picture>
+                <source srcset="./assets/screens/panel-plan.webp" type="image/webp" />
+                <img src="./assets/screens/panel-plan.png" alt="计划界面截图" loading="lazy" />
+              </picture>
+              <span>assets/screens/panel-plan.png</span>
             </div>
             <h3>计划</h3>
             <p>展示任务列表、状态切换和周报入口。</p>
@@ -136,9 +148,12 @@
 
           <article class="screen-card screen-card-bottom">
             <div class="screen-meta"><span>Notes</span></div>
-            <div class="screen-shot" data-file="assets/screens/panel-notes.webp">
-              <img src="./assets/screens/panel-notes.webp" alt="便签界面截图" loading="lazy" />
-              <span>assets/screens/panel-notes.webp</span>
+            <div class="screen-shot" data-file="assets/screens/panel-notes.png">
+              <picture>
+                <source srcset="./assets/screens/panel-notes.webp" type="image/webp" />
+                <img src="./assets/screens/panel-notes.png" alt="便签界面截图" loading="lazy" />
+              </picture>
+              <span>assets/screens/panel-notes.png</span>
             </div>
             <h3>便签</h3>
             <p>展示内容记录、备注和复制操作。</p>
@@ -146,9 +161,12 @@
 
           <article class="screen-card screen-card-bottom">
             <div class="screen-meta"><span>Wardrobe</span></div>
-            <div class="screen-shot" data-file="assets/screens/panel-wardrobe.webp">
-              <img src="./assets/screens/panel-wardrobe.webp" alt="装扮界面截图" loading="lazy" />
-              <span>assets/screens/panel-wardrobe.webp</span>
+            <div class="screen-shot" data-file="assets/screens/panel-wardrobe.png">
+              <picture>
+                <source srcset="./assets/screens/panel-wardrobe.webp" type="image/webp" />
+                <img src="./assets/screens/panel-wardrobe.png" alt="装扮界面截图" loading="lazy" />
+              </picture>
+              <span>assets/screens/panel-wardrobe.png</span>
             </div>
             <h3>装扮</h3>
             <p>展示服装、头饰、耳饰选择。</p>
@@ -156,9 +174,12 @@
 
           <article class="screen-card screen-card-bottom">
             <div class="screen-meta"><span>Settings</span></div>
-            <div class="screen-shot" data-file="assets/screens/panel-settings.webp">
-              <img src="./assets/screens/panel-settings.webp" alt="设置界面截图" loading="lazy" />
-              <span>assets/screens/panel-settings.webp</span>
+            <div class="screen-shot" data-file="assets/screens/panel-settings.png">
+              <picture>
+                <source srcset="./assets/screens/panel-settings.webp" type="image/webp" />
+                <img src="./assets/screens/panel-settings.png" alt="设置界面截图" loading="lazy" />
+              </picture>
+              <span>assets/screens/panel-settings.png</span>
             </div>
             <h3>设置</h3>
             <p>展示 API、快捷键、主题和透明度配置。</p>
@@ -204,28 +225,40 @@
         </div>
         <div class="outfit-grid">
           <article class="outfit-card">
-            <img src="./assets/showcase/wriothesley-gufeng.webp" alt="古风参考样式" loading="lazy" />
+            <picture>
+              <source srcset="./assets/showcase/wriothesley-gufeng.webp" type="image/webp" />
+              <img src="./assets/showcase/wriothesley-gufeng.png" alt="古风参考样式" loading="lazy" />
+            </picture>
             <div>
               <strong>古风</strong>
               <span>古风外观</span>
             </div>
           </article>
           <article class="outfit-card">
-            <img src="./assets/showcase/wriothesley-mecha.webp" alt="机甲参考样式" loading="lazy" />
+            <picture>
+              <source srcset="./assets/showcase/wriothesley-mecha.webp" type="image/webp" />
+              <img src="./assets/showcase/wriothesley-mecha.png" alt="机甲参考样式" loading="lazy" />
+            </picture>
             <div>
               <strong>机甲</strong>
               <span>机甲外观</span>
             </div>
           </article>
           <article class="outfit-card">
-            <img src="./assets/showcase/wriothesley-vest.webp" alt="背心参考样式" loading="lazy" />
+            <picture>
+              <source srcset="./assets/showcase/wriothesley-vest.webp" type="image/webp" />
+              <img src="./assets/showcase/wriothesley-vest.png" alt="背心参考样式" loading="lazy" />
+            </picture>
             <div>
               <strong>背心</strong>
               <span>简洁外观</span>
             </div>
           </article>
           <article class="outfit-card">
-            <img src="./assets/showcase/wriothesley-casual.webp" alt="休闲参考样式" loading="lazy" />
+            <picture>
+              <source srcset="./assets/showcase/wriothesley-casual.webp" type="image/webp" />
+              <img src="./assets/showcase/wriothesley-casual.png" alt="休闲参考样式" loading="lazy" />
+            </picture>
             <div>
               <strong>休闲</strong>
               <span>休闲外观</span>
@@ -279,7 +312,10 @@
       <div class="modal-backdrop" data-close-download></div>
       <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="downloadTitle">
         <button class="modal-close" type="button" aria-label="关闭下载弹窗" data-close-download>×</button>
-        <img src="./assets/icon.webp" alt="" />
+        <picture>
+          <source srcset="./assets/icon.webp" type="image/webp" />
+          <img src="./assets/icon.png" alt="" />
+        </picture>
         <h2 id="downloadTitle">下载 Wriothesley 桌面助手</h2>
         <p>下载后拖入“应用程序”。如果 macOS 提示无法验证开发者，请在终端执行下方命令后再打开。</p>
         <code class="modal-command">sudo xattr -r -d com.apple.quarantine /Applications/Wriothesley.app</code>

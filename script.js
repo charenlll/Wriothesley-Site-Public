@@ -11,15 +11,22 @@ const screenshotImages = document.querySelectorAll(".screen-shot img");
 const heroCharacter = document.querySelector("#hero-character");
 const petalField = document.querySelector(".petal-field");
 
+const ext = (function detectWebp() {
+  const canvas = document.createElement("canvas");
+  canvas.width = 1;
+  canvas.height = 1;
+  return canvas.toDataURL("image/webp").startsWith("data:image/webp") ? "webp" : "png";
+})();
+
 const heroFrames = [
-  "./assets/showcase/hero-frame-1.webp",
-  "./assets/showcase/hero-frame-2.webp",
-  "./assets/showcase/hero-frame-3.webp",
-  "./assets/showcase/hero-frame-4.webp",
-  "./assets/showcase/hero-frame-5.webp",
-  "./assets/showcase/hero-frame-6.webp",
-  "./assets/showcase/hero-frame-7.webp",
-  "./assets/showcase/hero-frame-8.webp",
+  `./assets/showcase/hero-frame-1.${ext}`,
+  `./assets/showcase/hero-frame-2.${ext}`,
+  `./assets/showcase/hero-frame-3.${ext}`,
+  `./assets/showcase/hero-frame-4.${ext}`,
+  `./assets/showcase/hero-frame-5.${ext}`,
+  `./assets/showcase/hero-frame-6.${ext}`,
+  `./assets/showcase/hero-frame-7.${ext}`,
+  `./assets/showcase/hero-frame-8.${ext}`,
 ];
 
 const heroFrameDurations = [1800, 1200, 900, 90, 1500, 1100, 80, 2200];
