@@ -508,10 +508,6 @@ h3 {
   line-height: 1.55;
 }
 
-.screen-shot:not(.has-image) img {
-  display: none;
-}
-
 .screen-shot span {
   position: absolute;
   top: 50%;

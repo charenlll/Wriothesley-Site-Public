@@ -7,7 +7,7 @@ const modal = document.querySelector("#downloadModal");
 const downloadLink = document.querySelector("#downloadLink");
 const openButtons = document.querySelectorAll("[data-open-download]");
 const closeButtons = document.querySelectorAll("[data-close-download]");
-const screenshotImages = document.querySelectorAll(".screen-shot img");
+// screenshot onload handled inline — no special error logic
 const heroCharacter = document.querySelector("#hero-character");
 const petalField = document.querySelector(".petal-field");
 
@@ -17,6 +17,22 @@ const ext = (function detectWebp() {
   canvas.height = 1;
   return canvas.toDataURL("image/webp").startsWith("data:image/webp") ? "webp" : "png";
 })();
+
+// Swap all img .png src to .webp when the browser supports it
+if (ext === "webp") {
+  document.querySelectorAll("img[src]").forEach((img) => {
+    const src = img.getAttribute("src");
+    if (src && src.endsWith(".png")) {
+      img.setAttribute("src", src.replace(/\.png$/, ".webp"));
+      // Also update data-file attribute on parent .screen-shot
+      const shot = img.closest(".screen-shot");
+      if (shot) {
+        const df = shot.getAttribute("data-file");
+        if (df) shot.setAttribute("data-file", df.replace(/\.png$/, ".webp"));
+      }
+    }
+  });
+}
 
 const heroFrames = [
   `./assets/showcase/hero-frame-1.${ext}`,
@@ -59,14 +75,11 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-screenshotImages.forEach((image) => {
-  const wrapper = image.closest(".screen-shot");
-  image.addEventListener("load", () => {
-    wrapper.classList.add("has-image");
-  });
-  image.addEventListener("error", () => {
-    wrapper.classList.remove("has-image");
-    image.removeAttribute("src");
+// Mark screenshots as loaded so the placeholder text hides
+document.querySelectorAll(".screen-shot img").forEach((img) => {
+  img.addEventListener("load", () => {
+    const w = img.closest(".screen-shot");
+    if (w) w.classList.add("has-image");
   });
 });
 
