@@ -23,7 +23,9 @@
         <a href="#screens">截图</a>
         <a href="#shortcuts">快捷键</a>
         <a href="#wardrobe">装扮</a>
+        <a href="#guide">说明</a>
         <a href="#download">下载</a>
+        <a href="./admin.html">审核</a>
       </nav>
       <button class="nav-download" type="button" data-open-download>下载</button>
     </header>
@@ -238,21 +240,43 @@
         <div class="section-heading">
           <p class="eyebrow">Privacy</p>
           <h2>本地优先，使用更安心</h2>
-          <p>账号数据、计划、聊天和便签默认保存在本机。API Key 只保留在本地配置中。</p>
+          <p>账号、计划、便签和最近聊天上下文可同步到云端。API Key、快捷键和本机保存路径只保留在本机。</p>
         </div>
         <div class="privacy-grid">
           <div>
-            <h3>多账号切换</h3>
-            <p>同一台电脑可多人使用，退出登录后回到登录页。</p>
+            <h3>云端账号</h3>
+            <p>邮箱注册后需要管理员审核，通过后才能登录桌面应用。</p>
           </div>
           <div>
             <h3>关键配置本地化</h3>
-            <p>API 地址、Key 和模型配置不随账号上传。</p>
+            <p>API 地址、Key、模型、快捷键、截图目录和开机自启动不上传。</p>
           </div>
           <div>
-            <h3>计划数据保护</h3>
-            <p>计划写入带备份恢复，降低本地文件损坏风险。</p>
+            <h3>轻量同步</h3>
+            <p>计划、便签、最近 30 条聊天记录和提示词随账号同步。</p>
           </div>
+        </div>
+      </section>
+
+      <section class="section guide-section" id="guide">
+        <div class="section-heading">
+          <p class="eyebrow">Guide</p>
+          <h2>使用说明</h2>
+          <p>首次使用先注册账号并等待审核，通过后即可在桌面应用里登录并同步个人数据。</p>
+        </div>
+        <div class="info-grid">
+          <article class="info-card">
+            <h3>注册与审核</h3>
+            <p>使用邮箱和密码注册。账号初始为待审核，管理员通过后才能进入应用。</p>
+          </article>
+          <article class="info-card">
+            <h3>云端同步</h3>
+            <p>计划、便签、最近聊天上下文、本地偏好和角色提示词会随账号同步。</p>
+          </article>
+          <article class="info-card">
+            <h3>本机配置</h3>
+            <p>DeepSeek API Key、保存目录、快捷键和开机自启动需要在每台电脑单独配置。</p>
+          </article>
         </div>
       </section>
 

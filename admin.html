@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Wriothesley 审核后台</title>
+    <link rel="icon" href="./assets/icon.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="admin-page">
+    <header class="site-header admin-header" aria-label="审核后台导航">
+      <a class="brand" href="./index.html">
+        <img src="./assets/icon.png" alt="" />
+        <span>Wriothesley Admin</span>
+      </a>
+      <a class="secondary-action" href="./index.html">返回官网</a>
+    </header>
+
+    <main class="admin-shell">
+      <section class="admin-panel" id="loginPanel">
+        <p class="eyebrow">Admin</p>
+        <h1>账号审核</h1>
+        <p class="admin-muted">使用已审核的管理员账号登录，审核待注册用户。</p>
+        <form class="admin-form" id="adminLoginForm">
+          <label>
+            <span>邮箱</span>
+            <input id="adminEmail" type="email" autocomplete="username" required />
+          </label>
+          <label>
+            <span>密码</span>
+            <input id="adminPassword" type="password" autocomplete="current-password" required />
+          </label>
+          <button class="primary-action" type="submit">登录</button>
+        </form>
+        <p class="admin-message" id="loginMessage" aria-live="polite"></p>
+      </section>
+
+      <section class="admin-panel admin-dashboard" id="dashboardPanel" hidden>
+        <div class="admin-toolbar">
+          <div>
+            <p class="eyebrow">Review Queue</p>
+            <h1>待审核用户</h1>
+          </div>
+          <div class="admin-actions">
+            <button class="secondary-action" type="button" id="refreshUsers">刷新</button>
+            <button class="secondary-action" type="button" id="logoutAdmin">退出</button>
+          </div>
+        </div>
+        <p class="admin-muted" id="adminIdentity"></p>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>邮箱</th>
+                <th>状态</th>
+                <th>角色</th>
+                <th>注册时间</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="usersTableBody"></tbody>
+          </table>
+        </div>
+        <p class="admin-message" id="dashboardMessage" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <script type="module" src="./admin.js"></script>
+  </body>
+</html>
