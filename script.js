@@ -18,22 +18,6 @@ const ext = (function detectWebp() {
   return canvas.toDataURL("image/webp").startsWith("data:image/webp") ? "webp" : "png";
 })();
 
-// Swap all img .png src to .webp when the browser supports it
-if (ext === "webp") {
-  document.querySelectorAll("img[src]").forEach((img) => {
-    const src = img.getAttribute("src");
-    if (src && src.endsWith(".png")) {
-      img.setAttribute("src", src.replace(/\.png$/, ".webp"));
-      // Also update data-file attribute on parent .screen-shot
-      const shot = img.closest(".screen-shot");
-      if (shot) {
-        const df = shot.getAttribute("data-file");
-        if (df) shot.setAttribute("data-file", df.replace(/\.png$/, ".webp"));
-      }
-    }
-  });
-}
-
 const heroFrames = [
   `./assets/showcase/hero-frame-1.${ext}`,
   `./assets/showcase/hero-frame-2.${ext}`,

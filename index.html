@@ -10,6 +10,7 @@
     <title>Wriothesley 桌面助手</title>
     <link rel="icon" href="./assets/icon.png" />
     <link rel="icon" type="image/webp" href="./assets/icon.webp" />
+    <link rel="preload" as="image" href="./assets/showcase/hero-frame-1.webp" type="image/webp" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -65,12 +66,19 @@
 
         <div class="hero-stage" aria-label="桌面助手角色预览">
           <div class="petal-field" aria-hidden="true"></div>
-          <img
-            id="hero-character"
-            class="hero-character"
-            src="./assets/showcase/hero-frame-1.png"
-            alt="Wriothesley 桌面角色"
-          />
+          <picture>
+            <source srcset="./assets/showcase/hero-frame-1.webp" type="image/webp" />
+            <img
+              id="hero-character"
+              class="hero-character"
+              src="./assets/showcase/hero-frame-1.png"
+              alt="Wriothesley 桌面角色"
+              width="1000"
+              height="1000"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </picture>
         </div>
       </section>
 
@@ -119,7 +127,10 @@
           <article class="screen-card screen-card-top">
             <div class="screen-meta"><span>AI Chat</span></div>
             <div class="screen-shot" data-file="assets/screens/panel-chat.png">
-              <img src="./assets/screens/panel-chat.png" alt="聊天界面截图" loading="lazy" />
+              <picture>
+                <source srcset="./assets/screens/panel-chat.webp" type="image/webp" />
+                <img src="./assets/screens/panel-chat.png" alt="聊天界面截图" width="1303" height="1210" loading="lazy" decoding="async" />
+              </picture>
               <span>assets/screens/panel-chat.png</span>
             </div>
             <h3>聊天</h3>
@@ -129,7 +140,10 @@
           <article class="screen-card screen-card-top">
             <div class="screen-meta"><span>Plan Board</span></div>
             <div class="screen-shot" data-file="assets/screens/panel-plan.png">
-              <img src="./assets/screens/panel-plan.png" alt="计划界面截图" loading="lazy" />
+              <picture>
+                <source srcset="./assets/screens/panel-plan.webp" type="image/webp" />
+                <img src="./assets/screens/panel-plan.png" alt="计划界面截图" width="1301" height="1213" loading="lazy" decoding="async" />
+              </picture>
               <span>assets/screens/panel-plan.png</span>
             </div>
             <h3>计划</h3>
@@ -139,7 +153,10 @@
           <article class="screen-card screen-card-bottom">
             <div class="screen-meta"><span>Notes</span></div>
             <div class="screen-shot" data-file="assets/screens/panel-notes.png">
-              <img src="./assets/screens/panel-notes.png" alt="便签界面截图" loading="lazy" />
+              <picture>
+                <source srcset="./assets/screens/panel-notes.webp" type="image/webp" />
+                <img src="./assets/screens/panel-notes.png" alt="便签界面截图" width="1303" height="1215" loading="lazy" decoding="async" />
+              </picture>
               <span>assets/screens/panel-notes.png</span>
             </div>
             <h3>便签</h3>
@@ -149,7 +166,10 @@
           <article class="screen-card screen-card-bottom">
             <div class="screen-meta"><span>Wardrobe</span></div>
             <div class="screen-shot" data-file="assets/screens/panel-wardrobe.png">
-              <img src="./assets/screens/panel-wardrobe.png" alt="装扮界面截图" loading="lazy" />
+              <picture>
+                <source srcset="./assets/screens/panel-wardrobe.webp" type="image/webp" />
+                <img src="./assets/screens/panel-wardrobe.png" alt="装扮界面截图" width="1303" height="1210" loading="lazy" decoding="async" />
+              </picture>
               <span>assets/screens/panel-wardrobe.png</span>
             </div>
             <h3>装扮</h3>
@@ -159,7 +179,10 @@
           <article class="screen-card screen-card-bottom">
             <div class="screen-meta"><span>Settings</span></div>
             <div class="screen-shot" data-file="assets/screens/panel-settings.png">
-              <img src="./assets/screens/panel-settings.png" alt="设置界面截图" loading="lazy" />
+              <picture>
+                <source srcset="./assets/screens/panel-settings.webp" type="image/webp" />
+                <img src="./assets/screens/panel-settings.png" alt="设置界面截图" width="1303" height="1212" loading="lazy" decoding="async" />
+              </picture>
               <span>assets/screens/panel-settings.png</span>
             </div>
             <h3>设置</h3>
@@ -206,28 +229,40 @@
         </div>
         <div class="outfit-grid">
           <article class="outfit-card">
-            <img src="./assets/showcase/wriothesley-gufeng.png" alt="古风参考样式" loading="lazy" />
+            <picture>
+              <source srcset="./assets/showcase/wriothesley-gufeng.webp" type="image/webp" />
+              <img src="./assets/showcase/wriothesley-gufeng.png" alt="古风参考样式" width="1000" height="1000" loading="lazy" decoding="async" />
+            </picture>
             <div>
               <strong>古风</strong>
               <span>古风外观</span>
             </div>
           </article>
           <article class="outfit-card">
-            <img src="./assets/showcase/wriothesley-mecha.png" alt="机甲参考样式" loading="lazy" />
+            <picture>
+              <source srcset="./assets/showcase/wriothesley-mecha.webp" type="image/webp" />
+              <img src="./assets/showcase/wriothesley-mecha.png" alt="机甲参考样式" width="1000" height="1000" loading="lazy" decoding="async" />
+            </picture>
             <div>
               <strong>机甲</strong>
               <span>机甲外观</span>
             </div>
           </article>
           <article class="outfit-card">
-            <img src="./assets/showcase/wriothesley-vest.png" alt="背心参考样式" loading="lazy" />
+            <picture>
+              <source srcset="./assets/showcase/wriothesley-vest.webp" type="image/webp" />
+              <img src="./assets/showcase/wriothesley-vest.png" alt="背心参考样式" width="1000" height="1000" loading="lazy" decoding="async" />
+            </picture>
             <div>
               <strong>背心</strong>
               <span>简洁外观</span>
             </div>
           </article>
           <article class="outfit-card">
-            <img src="./assets/showcase/wriothesley-casual.png" alt="休闲参考样式" loading="lazy" />
+            <picture>
+              <source srcset="./assets/showcase/wriothesley-casual.webp" type="image/webp" />
+              <img src="./assets/showcase/wriothesley-casual.png" alt="休闲参考样式" width="1000" height="1000" loading="lazy" decoding="async" />
+            </picture>
             <div>
               <strong>休闲</strong>
               <span>休闲外观</span>
@@ -303,7 +338,10 @@
       <div class="modal-backdrop" data-close-download></div>
       <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="downloadTitle">
         <button class="modal-close" type="button" aria-label="关闭下载弹窗" data-close-download>×</button>
-        <img src="./assets/icon.png" alt="" />
+        <picture>
+          <source srcset="./assets/icon.webp" type="image/webp" />
+          <img src="./assets/icon.png" alt="" width="512" height="512" />
+        </picture>
         <h2 id="downloadTitle">下载 Wriothesley 桌面助手</h2>
         <p>下载后拖入"应用程序"。如果 macOS 提示无法验证开发者，请在终端执行下方命令后再打开。</p>
         <code class="modal-command">sudo xattr -r -d com.apple.quarantine /Applications/Wriothesley.app</code>

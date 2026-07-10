@@ -22,7 +22,7 @@ sudo xattr -r -d com.apple.quarantine /Applications/Wriothesley.app
 
 ## 图片优化
 
-页面图片均使用 WebP 格式以加快加载速度。原始 PNG 转换为 WebP 后，总大小从 **12.6MB 降至 1.5MB（88% 压缩率）**。
+页面优先通过 `<picture>` 加载 WebP，并保留 PNG 兜底；首屏角色图会预加载，其他截图和装扮图使用懒加载。原始 PNG 转换为 WebP 后，总大小从 **12.6MB 降至 1.5MB（88% 压缩率）**。
 
 如果新增或替换了图片，运行以下命令转换格式：
 
